@@ -1,0 +1,87 @@
+{
+  "app": {
+    "title": "E-commerce Admin"
+  },
+  "nav": {
+    "dashboard": "Дашборд",
+    "products": "Продукты",
+    "profile": "Профиль",
+    "settings": "Настройки",
+    "logout": "Выход"
+  },
+  "auth": {
+    "login": "Вход",
+    "register": "Регистрация",
+    "username": "Логин",
+    "password": "Пароль",
+    "submit": "Продолжить",
+    "registerStub": "Заглушка",
+    "loggingOut": "Выход..."
+  },
+  "dashboard": {
+    "stub": "Заглушка"
+  },
+  "profile": {
+    "name": "Имя",
+    "email": "Email",
+    "logout": "Выйти"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "notFound": "Страница не найдена",
+    "notFoundHint": "Такой страницы не существует."
+  },
+  "errorBoundary": {
+    "title": "Произошла ошибка",
+    "description": "Возникла непредвиденная ошибка. Можно перезагрузить страницу или вернуться на главную.",
+    "reload": "Перезагрузить",
+    "home": "На главную",
+    "details": "Показать детали"
+  },
+  "apiErrors": {
+    "invalidCredentials": "Неверный логин или пароль",
+    "unauthorized": "Требуется авторизация",
+    "forbidden": "Доступ запрещён",
+    "notFound": "Не найдено",
+    "server": "Ошибка сервера",
+    "network": "Ошибка сети",
+    "unknown": "Что-то пошло не так"
+  },
+  "settings": {
+    "title": "Настройки",
+    "theme": "Тема",
+    "language": "Язык",
+    "pageSize": "Размер страницы каталога",
+    "light": "Светлая",
+    "dark": "Тёмная",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "products": {
+    "searchPlaceholder": "Поиск по названию...",
+    "search": "Искать",
+    "clear": "Очистить",
+    "prev": "Назад",
+    "next": "Вперёд",
+    "total": "Всего",
+    "limit": "Лимит",
+    "empty": "Продукты не найдены",
+    "error": "Не удалось загрузить продукты",
+    "detailsTitle": "Продукт",
+    "backToList": "К списку",
+    "invalidId": "Некорректный id продукта",
+    "detailsError": "Не удалось загрузить продукт",
+    "notFound": "Продукт не найден",
+    "columns": {
+      "title": "Название",
+      "category": "Категория",
+      "price": "Цена",
+      "rating": "Рейтинг"
+    },
+    "fields": {
+      "category": "Категория",
+      "price": "Цена",
+      "rating": "Рейтинг"
+    }
+  }
+}
