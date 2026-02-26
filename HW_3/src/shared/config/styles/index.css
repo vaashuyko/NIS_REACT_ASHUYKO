@@ -1,0 +1,466 @@
+:root {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+:root[data-theme="light"] {
+    --bg: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --card: #f3f4f6;
+    --border: #e5e7eb;
+    --danger: #b91c1c;
+}
+
+:root[data-theme="dark"] {
+    --bg: #0b1220;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --card: #111827;
+    --border: #1f2937;
+    --danger: #f87171;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+input,
+select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+}
+
+select {
+    padding-right: 38px;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--muted);
+}
+
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.headerTitle {
+    font-weight: 700;
+}
+
+.body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+}
+
+.sidebar {
+    padding: 12px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--text);
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.navLink.active {
+    border-color: var(--border);
+    background: var(--card);
+}
+
+.content {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.page {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+:root[data-theme="dark"] .card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn.secondary {
+    background: transparent;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.row:last-child {
+    border-bottom: 0;
+}
+
+.rowLabel {
+    color: var(--muted);
+}
+
+.rowValue {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.settingsRowValue select {
+    max-width: 520px;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.errorText {
+    margin-top: 10px;
+    color: var(--danger);
+}
+
+.authPage {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12vh 16px 0;
+    box-sizing: border-box;
+}
+
+.authCard {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.authTitle {
+    margin: 0;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.authInner {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+}
+
+.authActions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.profileRow {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.profileRow:last-of-type {
+    border-bottom: 0;
+}
+
+.profileActions {
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.productsToolbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.productsSearch {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.productsPager {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.productsMeta {
+    white-space: nowrap;
+}
+
+.productsTable {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.productsHead {
+    display: grid;
+    grid-template-columns: 1fr 220px 140px 140px;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    font-weight: 700;
+}
+
+.productsRow {
+    display: grid;
+    grid-template-columns: 1fr 220px 140px 140px;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    text-decoration: none;
+}
+
+.productsRow:hover {
+    border-color: var(--muted);
+}
+
+.productsCol.title {
+    font-weight: 600;
+}
+
+.productsDetailsTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.productDetails {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 16px;
+    align-items: start;
+}
+
+.productTitle {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.productGrid {
+    margin-top: 12px;
+}
+
+.productMedia {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.productThumb {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    object-fit: cover;
+}
+
+.errorBoundaryPage {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.errorBoundaryCard {
+    width: 100%;
+    max-width: 560px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+:root[data-theme="dark"] .errorBoundaryCard {
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.32);
+}
+
+.errorBoundaryIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.errorBoundaryTitle {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+}
+
+.errorBoundaryDesc {
+    color: var(--muted);
+    line-height: 1.45;
+}
+
+.errorBoundaryActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.errorBoundaryDetails {
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    color: var(--muted);
+}
+
+.errorBoundaryPre {
+    margin: 10px 0 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+.centerPage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    box-sizing: border-box;
+}
+
+.notFoundCard {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 18px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notFoundTop {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.notFoundCode {
+    font-weight: 900;
+    font-size: 44px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.notFoundTitle {
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+}
+
+.notFoundDesc {
+    color: var(--muted);
+    line-height: 1.45;
+}
+
+.notFoundActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
